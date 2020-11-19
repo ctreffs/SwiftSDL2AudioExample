@@ -15,7 +15,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "Resources",
-                resources: [.copy("Asteroids.wav")]),
+                resources: [.copy("asteroids.wav")]),
         .target(name: "SDLAudioExample",
                 dependencies: ["SDL2", "Resources"])
     ]
