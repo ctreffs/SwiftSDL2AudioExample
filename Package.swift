@@ -14,8 +14,9 @@ let package = Package(
         .package(name: "SDL2", url: "https://github.com/ctreffs/SwiftSDL2.git", from: "1.1.0")
     ],
     targets: [
+        .target(name: "Resources",
+                resources: [.copy("Asteroids.wav")]),
         .target(name: "SDLAudioExample",
-                dependencies: ["SDL2"],
-                resources: [.copy("Resources/")])
+                dependencies: ["SDL2", "Resources"])
     ]
 )

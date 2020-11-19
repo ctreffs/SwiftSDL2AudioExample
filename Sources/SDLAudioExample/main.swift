@@ -1,9 +1,11 @@
 import SDL2
+import Resources
 
 // Adaption of example code from <https://gist.github.com/armornick/3447121>
 
 // absolute path to WAV resource file.
-let MUS_PATH = "/Users/ctreffs/Development/personal/game-dev/SDLAudioTest/Sources/Resources/Asteroids.wav"
+let MUS_PATH = bundleResourcesPath()!.appendingPathComponent("Asteroids.wav").path
+print(MUS_PATH)
 
 // gloabl declarations
 var audio_buffer: UnsafeMutableBufferPointer<Uint8>?; // global pointer to the audio buffer to be played
